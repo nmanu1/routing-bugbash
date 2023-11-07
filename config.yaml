@@ -9,11 +9,15 @@ buildConfiguration:
 dynamicRedirects:
   # This is a rewrite because the status code is 200. It also takes advantage of built-in splat support.
   -
-    from: /grey/*
-    to: /:splat
+    from: /colors/:color/test
+    to: /:color/testing
     status: 200
   # This is a custom redirect because the status code is 3xx.
 staticRedirects:
+  -
+    from: /grey/testing
+    to: /gray
+    status: 200
   -
     from: /grey-redirect
     to: /gray
